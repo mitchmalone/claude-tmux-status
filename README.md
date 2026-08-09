@@ -22,7 +22,7 @@ A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin that show
 From inside Claude Code, run:
 
 ```
-/plugin marketplace add https://github.com/haxybaxy/claude-tmux-status.git
+/plugin marketplace add https://github.com/mitchmalone/claude-tmux-status.git
 ```
 
 Then install the plugin:
@@ -42,7 +42,7 @@ Finally, activate it:
 Clone into your Claude Code plugins directory:
 
 ```bash
-git clone https://github.com/haxybaxy/claude-tmux-status \
+git clone https://github.com/mitchmalone/claude-tmux-status \
   ~/.claude/plugins/claude-tmux-status
 ```
 
@@ -61,7 +61,7 @@ The plugin registers [hooks](https://docs.anthropic.com/en/docs/claude-code/hook
 | `Stop`              | `😴`        | Idle                                        |
 | `PermissionRequest` | `👀`        | Needs attention                             |
 | `Notification`      | `👀`        | Needs attention                             |
-| `SessionEnd`        | _(removed)_ | Cleans up and re-enables `automatic-rename` |
+| `SessionEnd`        | _(removed)_ | Cleans up while preserving the window name |
 
 ## Customization
 

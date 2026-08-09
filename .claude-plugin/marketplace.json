@@ -1,8 +1,7 @@
 {
-  "name": "tmux-status-dev",
+  "name": "mitchmalone-tmux-status",
   "owner": {
-    "name": "Zaid Alsaheb",
-    "email": "him@zaidalsaheb.com"
+    "name": "Mitch Malone"
   },
   "plugins": [
     {
