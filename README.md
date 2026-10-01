@@ -5,7 +5,7 @@ A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin that show
 
 ```
  zsh              — no session
- zsh [🧑‍🍳]          — thinking / tool use
+ zsh [🤖]          — thinking / tool use
  zsh [👀]          — needs attention (permission request / notification)
  zsh [😴]          — idle
 ```
@@ -55,9 +55,9 @@ The plugin registers [hooks](https://docs.anthropic.com/en/docs/claude-code/hook
 | Event               | Icon        | State                                       |
 | ------------------- | ----------- | ------------------------------------------- |
 | `SessionStart`      | `😴`        | Idle                                        |
-| `UserPromptSubmit`  | `🧑‍🍳`        | Processing                                  |
-| `PreToolUse`        | `🧑‍🍳`        | Processing                                  |
-| `PostToolUse`       | `🧑‍🍳`        | Processing                                  |
+| `UserPromptSubmit`  | `🤖`        | Processing                                  |
+| `PreToolUse`        | `🤖`        | Processing                                  |
+| `PostToolUse`       | `🤖`        | Processing                                  |
 | `Stop`              | `😴`        | Idle                                        |
 | `PermissionRequest` | `👀`        | Needs attention                             |
 | `Notification`      | `👀`        | Needs attention                             |
@@ -94,7 +94,7 @@ Changes take effect immediately on the next lifecycle event — no restart neede
 
 | Theme       | Idle | Processing | Attention | Notes                      |
 | ----------- | ---- | ---------- | --------- | -------------------------- |
-| `emoji`     | 😴   | 🧑‍🍳         | 👀        | Default, works everywhere  |
+| `emoji`     | 😴   | 🤖         | 👀        | Default, works everywhere  |
 | `nerd-font` | 󰒲    | 󰑮          | 󰂞         | Requires a patched font    |
 | `minimal`   | zzz  | ...        | (!)       | Plain text, no font needed |
 
@@ -104,11 +104,13 @@ The active icon set is stored in `config/active.conf` as simple key=value pairs:
 
 ```
 idle=😴
-processing=🧑‍🍳
+processing=🤖
 attention=👀
 ```
 
 Theme presets live in `config/themes/*.json`.
+
+Use single-codepoint icons. Joined emoji such as 🧑‍🍳 (person, ZWJ, frying pan) are one two-column character to tmux but four columns to mosh-server, so under mosh a status line that fits in tmux overflows the last row and scrolls the whole screen.
 
 ## License
 

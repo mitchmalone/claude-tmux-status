@@ -56,7 +56,7 @@ icon_for() {
   if [[ -z "$icon" ]]; then
     case "$state" in
       idle) icon='😴' ;;
-      processing) icon='🧑‍🍳' ;;
+      processing) icon='🤖' ;;
       attention) icon='👀' ;;
       *) icon="$state" ;;
     esac
