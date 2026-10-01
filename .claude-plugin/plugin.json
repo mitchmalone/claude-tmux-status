@@ -1,7 +1,7 @@
 {
   "name": "tmux-status",
   "description": "Show Claude Code session state as an emoji in your tmux window name",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": {
     "name": "Mitch Malone"
   },
